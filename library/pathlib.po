@@ -1372,7 +1372,7 @@ msgid ""
 "such as from :attr:`parent` and :meth:`relative_to`. Subclasses may override "
 "this method to pass information to derivative paths, for example::"
 msgstr ""
-"透過結合給定的 *pathsegments* 建立一個相同類型的新路徑物件，當一個衍生路徑被"
+"透過結合給定的 *pathsegments* 建立一個相同型別的新路徑物件，當一個衍生路徑被"
 "建立的時候會呼叫這個方法，例如從 :attr:`parent` 和 :meth:`relative_to` 建立衍"
 "生路徑。子類別可以覆寫此方法來傳遞資訊給衍生路徑，例如： ::"
 
