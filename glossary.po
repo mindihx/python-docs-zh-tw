@@ -1478,7 +1478,7 @@ msgstr ""
 
 #: ../../glossary.rst:642
 msgid "immortal"
-msgstr "immportal（不滅）"
+msgstr "immortal（不滅）"
 
 #: ../../glossary.rst:644
 msgid ""
