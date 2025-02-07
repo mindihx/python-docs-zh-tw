@@ -1,4 +1,4 @@
-# Copyright (C) 2001-2024, Python Software Foundation
+# Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 #
 # Translators:
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 00:14+0000\n"
+"POT-Creation-Date: 2025-01-19 00:15+0000\n"
 "PO-Revision-Date: 2024-04-25 14:17+0800\n"
 "Last-Translator: KNChiu <y9760210@gmail.com>\n"
 "Language-Team: Chinese - TAIWAN (https://github.com/python/python-docs-zh-"
@@ -45,8 +45,8 @@ msgstr "有的。"
 
 #: ../../faq/programming.rst:19
 msgid ""
-"Several debuggers for Python are described below, and the built-in function :"
-"func:`breakpoint` allows you to drop into any of them."
+"Several debuggers for Python are described below, and the built-in "
+"function :func:`breakpoint` allows you to drop into any of them."
 msgstr ""
 "下面描述了幾個 Python 除錯器，內建函式 :func:`breakpoint` 允許你進入其中任何"
 "一個。"
@@ -296,7 +296,7 @@ msgstr ""
 msgid ""
 "In the example above you can access the outer scope variable by declaring it "
 "global:"
-msgstr "在上面的示例中，你可以透過將其聲明為全域變數來存取外部範圍變數："
+msgstr "在上面的範例中，你可以透過將其聲明為全域變數來存取外部範圍變數："
 
 #: ../../faq/programming.rst:167
 #, fuzzy
@@ -309,11 +309,10 @@ msgstr ""
 "在外部範圍內修改變數的值："
 
 #: ../../faq/programming.rst:174
-#, fuzzy
 msgid ""
 "You can do a similar thing in a nested scope using the :keyword:`nonlocal` "
 "keyword:"
-msgstr "你可以使用 :keyword:`nonlocal` 關鍵字在嵌套範圍內做類似的事情："
+msgstr "你可以使用 :keyword:`nonlocal` 關鍵字在巢狀作用域內做類似的事情："
 
 #: ../../faq/programming.rst:192
 msgid "What are the rules for local and global variables in Python?"
@@ -341,17 +340,17 @@ msgid ""
 "a component of an imported module.  This clutter would defeat the usefulness "
 "of the ``global`` declaration for identifying side-effects."
 msgstr ""
-"雖然起初有點令人驚訝，但稍加考慮就可以解釋這一點。一方面，要求 :keyword:"
-"`global` 分配的變數可以防止意外的副作用。另一方面，如果所有全域參照都需要 "
-"``global``，那麼你將一直使用 ``global``。你必須將對內建函式或引入模組的組件的"
-"每個參照聲明為全域。這種混亂會破壞用於識別副作用的 ``global`` 聲明的有用性。"
+"雖然起初有點令人驚訝，但稍加考慮就可以解釋這一點。一方面，要"
+"求 :keyword:`global` 分配的變數可以防止意外的副作用。另一方面，如果所有全域參"
+"照都需要 ``global``，那麼你將一直使用 ``global``。你必須將對內建函式或引入模"
+"組的組件的每個參照聲明為全域。這種混亂會破壞用於識別副作用的 ``global`` 聲明"
+"的有用性。"
 
 #: ../../faq/programming.rst:208
-#, fuzzy
 msgid ""
 "Why do lambdas defined in a loop with different values all return the same "
 "result?"
-msgstr "為什麼在具有不同值的迴圈中定義的 lambda 都回傳相同的結果？"
+msgstr "為什麼以不同的值在迴圈中定義的 lambda 都回傳相同的結果？"
 
 #: ../../faq/programming.rst:210
 msgid ""
@@ -371,16 +370,15 @@ msgstr ""
 "...     squares.append(lambda: x**2)"
 
 #: ../../faq/programming.rst:217
-#, fuzzy
 msgid ""
 "This gives you a list that contains 5 lambdas that calculate ``x**2``.  You "
 "might expect that, when called, they would return, respectively, ``0``, "
 "``1``, ``4``, ``9``, and ``16``.  However, when you actually try you will "
 "see that they all return ``16``::"
 msgstr ""
-"這為你提供了一個包含 5 個計算 ``x**2`` 的 lambda 的list。你可能期望，當被呼叫"
-"時，它們會分別回傳 ``0``、``1``、``4``、``9`` 和 ``16``。然而，當你實際嘗試"
-"時，你會發現它們都回傳 ``16``： ::"
+"這會提供一個包含五個計算 ``x**2`` 的 lambda 串列。你可能會預期在呼叫它時，它"
+"們會分別回傳 ``0``、``1``、``4``、``9`` 和 ``16``，然而當你實際嘗試你會發現它"
+"們都回傳 ``16``： ::"
 
 #: ../../faq/programming.rst:222
 msgid ""
@@ -395,7 +393,6 @@ msgstr ""
 "16"
 
 #: ../../faq/programming.rst:227
-#, fuzzy
 msgid ""
 "This happens because ``x`` is not local to the lambdas, but is defined in "
 "the outer scope, and it is accessed when the lambda is called --- not when "
@@ -403,9 +400,9 @@ msgid ""
 "the functions now return ``4**2``, i.e. ``16``.  You can also verify this by "
 "changing the value of ``x`` and see how the results of the lambdas change::"
 msgstr ""
-"發生這種情況是因為 ``x`` 不是 lambda 的局部變數，而是在外部作用域中定義的，並"
-"且在呼叫 lambda 時存取它——而不是在定義時存取它。在迴圈結束時，``x`` 的值為 "
-"``4``，因此所有函式現在都回傳 ``4**2``，即 ``16``。你還可以透過更改 ``x`` 的"
+"發生這種情況是因為 ``x`` 不是 lambda 的局部變數，而是在外部作用域中定義的，且"
+"是在呼叫 lambda 時才會存取它，並非於定義時就會存取。在迴圈結束時，``x`` 的值"
+"為 ``4``，因此所有函式都回傳 ``4**2``，即為 ``16``。你還可以透過更改 ``x`` 的"
 "值來驗證這一點，並查看 lambda 運算式的結果如何變化： ::"
 
 #: ../../faq/programming.rst:233
@@ -419,7 +416,6 @@ msgstr ""
 "64"
 
 #: ../../faq/programming.rst:237
-#, fuzzy
 msgid ""
 "In order to avoid this, you need to save the values in variables local to "
 "the lambdas, so that they don't rely on the value of the global ``x``::"
@@ -494,7 +490,7 @@ msgstr "config.py： ::"
 
 #: ../../faq/programming.rst:270
 msgid "x = 0   # Default value of the 'x' configuration setting"
-msgstr ""
+msgstr "x = 0   # 'x' 配置設定的預設值"
 
 #: ../../faq/programming.rst:272
 msgid "mod.py::"
@@ -523,16 +519,14 @@ msgstr ""
 "print(config.x)"
 
 #: ../../faq/programming.rst:283
-#, fuzzy
 msgid ""
 "Note that using a module is also the basis for implementing the singleton "
 "design pattern, for the same reason."
 msgstr "請注意，出於同樣的原因，使用模組也是實作單例設計模式的基礎。"
 
 #: ../../faq/programming.rst:288
-#, fuzzy
 msgid "What are the \"best practices\" for using import in a module?"
-msgstr "在模組中使用 import 的「最佳實踐」是什麼？"
+msgstr "在模組中使用 import 的「最佳實踐」有哪些？"
 
 #: ../../faq/programming.rst:290
 #, fuzzy
@@ -563,8 +557,8 @@ msgstr "如果你按以下順序引入模組，這是一個很好的做法："
 
 #: ../../faq/programming.rst:301
 msgid ""
-"standard library modules -- e.g. :mod:`sys`, :mod:`os`, :mod:`argparse`, :"
-"mod:`re`"
+"standard library modules -- "
+"e.g. :mod:`sys`, :mod:`os`, :mod:`argparse`, :mod:`re`"
 msgstr ""
 "標準函式庫模組 —— 例如 :mod:`sys`、:mod:`os`、:mod:`argparse`、:mod:`re`"
 
@@ -645,8 +639,8 @@ msgstr ""
 "入移動到局部範圍內，例如在函式定義內。如果根據程式的執行方式，許多引入是不必"
 "要的，則此技術特別有用。如果模組僅在該函式中使用，你可能還想將引入移動到該函"
 "式中。請注意，由於模組的一次性初始化，第一次載入模組可能很昂貴，但多次載入模"
-"組實際上是免費的，只需幾次字典查詢。即使模組名稱超出範圍，該模組也可能在 :"
-"data:`sys.modules` 中可用。"
+"組實際上是免費的，只需幾次字典查詢。即使模組名稱超出範圍，該模組也可能"
+"在 :data:`sys.modules` 中可用。"
 
 #: ../../faq/programming.rst:338
 #, fuzzy
@@ -731,6 +725,9 @@ msgid ""
 "    if mydict is None:\n"
 "        mydict = {}  # create a new dict for local namespace"
 msgstr ""
+"def foo(mydict=None):\n"
+"    if mydict is None:\n"
+"        mydict = {}  # 為區域命名空間建立一個新字典"
 
 #: ../../faq/programming.rst:374
 #, fuzzy
@@ -760,11 +757,10 @@ msgid ""
 msgstr ""
 
 #: ../../faq/programming.rst:389
-#, fuzzy
 msgid ""
 "You could use a global variable containing a dictionary instead of the "
 "default value; it's a matter of taste."
-msgstr "你可以使用包含字典的全域變數而不是預設值；這是一個品味問題。"
+msgstr "你可以使用包含字典的全域變數而不是預設值；這取決於喜好。"
 
 #: ../../faq/programming.rst:394
 #, fuzzy
@@ -803,17 +799,16 @@ msgid "What is the difference between arguments and parameters?"
 msgstr "引數 (arguments) 和參數 (parameters) 有什麼區別？"
 
 #: ../../faq/programming.rst:417
-#, fuzzy
 msgid ""
 ":term:`Parameters <parameter>` are defined by the names that appear in a "
 "function definition, whereas :term:`arguments <argument>` are the values "
-"actually passed to a function when calling it.  Parameters define what :term:"
-"`kind of arguments <parameter>` a function can accept.  For example, given "
-"the function definition::"
+"actually passed to a function when calling it.  Parameters define "
+"what :term:`kind of arguments <parameter>` a function can accept.  For "
+"example, given the function definition::"
 msgstr ""
 ":term:`參數 <parameter>`\\ 由出現在函式定義中的名稱定義，而\\ :term:`引數 "
-"<argument>`\\ 是呼叫函式時實際傳遞給函式的值。參數定義函式可以接受的\\ :term:"
-"引數種類 <parameter>`。例如，給定函式定義： ::"
+"<argument>`\\ 是呼叫函式時實際傳遞給函式的值。參數定義函式可以接受的"
+"\\ :term:`引數種類 <parameter>`。例如，給定以下函式定義： ::"
 
 #: ../../faq/programming.rst:423
 msgid ""
@@ -828,7 +823,7 @@ msgid ""
 "*foo*, *bar* and *kwargs* are parameters of ``func``.  However, when calling "
 "``func``, for example::"
 msgstr ""
-"*foo*、*bar* 和 *kwargs* 是 ``func`` 的參數。然而，當呼叫 ``func`` 時，例"
+"*foo*、*bar* 和 *kwargs* 是 ``func`` 的參數。然而當呼叫 ``func`` 時，例"
 "如： ::"
 
 #: ../../faq/programming.rst:429
@@ -837,7 +832,7 @@ msgstr "func(42, bar=314, extra=somevar)"
 
 #: ../../faq/programming.rst:431
 msgid "the values ``42``, ``314``, and ``somevar`` are arguments."
-msgstr "``42`` 、 ``314`` 和 ``somevar`` 是引數。"
+msgstr "``42``、``314`` 和 ``somevar`` 是引數。"
 
 #: ../../faq/programming.rst:435
 msgid "Why did changing list 'y' also change list 'x'?"
@@ -892,19 +887,17 @@ msgid ""
 msgstr "list 是 :term:`mutable`，這意味著你可以變更它們的內容。"
 
 #: ../../faq/programming.rst:457
-#, fuzzy
 msgid ""
 "After the call to :meth:`!append`, the content of the mutable object has "
 "changed from ``[]`` to ``[10]``.  Since both the variables refer to the same "
 "object, using either name accesses the modified value ``[10]``."
 msgstr ""
 "在呼叫 :meth:`!append` 之後，可變物件的內容從 ``[]`` 變成了 ``[10]``。由於這"
-"兩個變數都參照同一個物件，因此使用任一名稱都可以存取修改後的值 ``[10]`` 。"
+"兩個變數都參照同一個物件，因此使用任一名稱都可以存取修改後的值 ``[10]``。"
 
 #: ../../faq/programming.rst:461
-#, fuzzy
 msgid "If we instead assign an immutable object to ``x``::"
-msgstr "如果我們改為將不可變物件分配給 ``x``： ::"
+msgstr "如果我們改為賦予一個不可變物件給 ``x``： ::"
 
 #: ../../faq/programming.rst:463
 msgid ""
@@ -916,6 +909,13 @@ msgid ""
 ">>> y\n"
 "5"
 msgstr ""
+">>> x = 5  # 整數為不可變的\n"
+">>> y = x\n"
+">>> x = x + 1  # 5 不可變，在這邊會建立一個新物件\n"
+">>> x\n"
+"6\n"
+">>> y\n"
+"5"
 
 #: ../../faq/programming.rst:471
 #, fuzzy
@@ -949,9 +949,9 @@ msgstr ""
 "一些操作（例如 ``y.append(10)`` 和 ``y.sort()``）會改變物件，而表面上相似的操"
 "作（例如 ``y = y + [10]`` 和： func:`sorted(y) <sorted>`) 建立一個新物件。通"
 "常在 Python 中（以及在標準函式庫中的所有情況下）改變物件的方法將回傳 "
-"``None`` 以幫助避免混淆這兩種型別的操作。因此，如果你錯誤地編寫了 ``y."
-"sort()``，認為它會為你提供 ``y`` 的排序副本，那麼你最終會得到 ``None``，這可"
-"能會導致你的程式生成一個容易診斷的錯誤。"
+"``None`` 以幫助避免混淆這兩種型別的操作。因此，如果你錯誤地編寫了 "
+"``y.sort()``，認為它會為你提供 ``y`` 的排序副本，那麼你最終會得到 ``None``，"
+"這可能會導致你的程式生成一個容易診斷的錯誤。"
 
 #: ../../faq/programming.rst:488
 #, fuzzy
@@ -1004,12 +1004,10 @@ msgstr ""
 "置函式 :func:`id`。"
 
 #: ../../faq/programming.rst:510
-#, fuzzy
 msgid "How do I write a function with output parameters (call by reference)?"
-msgstr "如何編寫帶有輸出參數的函式（透過參照呼叫）？"
+msgstr "如何編寫帶有輸出參數的函式（透過傳參照呼叫 (call by reference)）？"
 
 #: ../../faq/programming.rst:512
-#, fuzzy
 msgid ""
 "Remember that arguments are passed by assignment in Python.  Since "
 "assignment just creates references to objects, there's no alias between an "
@@ -1017,7 +1015,7 @@ msgid ""
 "You can achieve the desired effect in a number of ways."
 msgstr ""
 "請記住，在 Python 中引數是透過賦值傳遞的。由於賦值只是建立對物件的參照，因此"
-"呼叫者和被呼叫者的引數名稱之間沒有別名，因此本身沒有按參照呼叫。你可以透過多"
+"呼叫者和被呼叫者的引數名稱之間沒有別名，因此本身沒有傳參照呼叫。你可以透過多"
 "種方式實作所需的效果。"
 
 #: ../../faq/programming.rst:517
@@ -1035,11 +1033,18 @@ msgid ""
 ">>> func1(x, y)\n"
 "('new-value', 100)"
 msgstr ""
+">>> def func1(a, b):\n"
+"...     a = 'new-value'        # a 和 b 為區域名稱\n"
+"...     b = b + 1              # 賦值到新物件\n"
+"...     return a, b            # 回傳新值\n"
+"...\n"
+">>> x, y = 'old-value', 99\n"
+">>> func1(x, y)\n"
+"('new-value', 100)"
 
 #: ../../faq/programming.rst:528
-#, fuzzy
 msgid "This is almost always the clearest solution."
-msgstr "這幾乎總是最清晰的解決方案。"
+msgstr "這幾乎都會是最清楚的方案。"
 
 #: ../../faq/programming.rst:530
 #, fuzzy
@@ -1048,9 +1053,8 @@ msgid ""
 msgstr "透過使用全域變數。這不是執行緒安全的，不推薦。"
 
 #: ../../faq/programming.rst:532
-#, fuzzy
 msgid "By passing a mutable (changeable in-place) object::"
-msgstr "透過傳遞一個可變的（原地可變的）物件： ::"
+msgstr "透過傳遞一個可變的（可於原地 (in-place) 改變的）物件： ::"
 
 #: ../../faq/programming.rst:534
 msgid ""
@@ -1063,6 +1067,14 @@ msgid ""
 ">>> args\n"
 "['new-value', 100]"
 msgstr ""
+">>> def func2(a):\n"
+"...     a[0] = 'new-value'     # 'a' 參照一個可變的串列\n"
+"...     a[1] = a[1] + 1        # 改變共享的物件\n"
+"...\n"
+">>> args = ['old-value', 99]\n"
+">>> func2(args)\n"
+">>> args\n"
+"['new-value', 100]"
 
 #: ../../faq/programming.rst:543
 #, fuzzy
@@ -1164,7 +1176,6 @@ msgstr ""
 "        return self.a * x + self.b"
 
 #: ../../faq/programming.rst:598
-#, fuzzy
 msgid "In both cases, ::"
 msgstr "在這兩種情況下： ::"
 
@@ -1260,8 +1271,8 @@ msgstr ""
 #: ../../faq/programming.rst:641
 #, fuzzy
 msgid ""
-"Some objects can be copied more easily.  Dictionaries have a :meth:`~dict."
-"copy` method::"
+"Some objects can be copied more easily.  Dictionaries have "
+"a :meth:`~dict.copy` method::"
 msgstr "可以更輕鬆地複製某些物件。字典有一個 :meth:`~dict.copy` 方法： ::"
 
 #: ../../faq/programming.rst:644
@@ -1379,9 +1390,8 @@ msgid ""
 msgstr "....如果你發現它有很多名字，或者根本沒有名字，請不要感到驚訝！"
 
 #: ../../faq/programming.rst:701
-#, fuzzy
 msgid "What's up with the comma operator's precedence?"
-msgstr "逗號運算子的優先級是怎麼回事？"
+msgstr "逗號運算子的優先級是什麼？"
 
 #: ../../faq/programming.rst:703
 #, fuzzy
@@ -1482,7 +1492,7 @@ msgid ""
 "Bartelt::"
 msgstr ""
 "是的。通常這是透過在 :keyword:`!lambda` 中嵌套 :keyword:`lambda` 來完成的。請"
-"參閱以下三個示例，稍微改編自 Ulf Bartelt： ::"
+"參閱以下三個範例，稍微改編自 Ulf Bartelt： ::"
 
 #: ../../faq/programming.rst:747
 msgid ""
@@ -1518,7 +1528,7 @@ msgstr "孩子們，不要在家裡嘗試這個！"
 
 #: ../../faq/programming.rst:777
 msgid "What does the slash(/) in the parameter list of a function mean?"
-msgstr "函式參數串列中的斜槓 (/) 是什麼意思？"
+msgstr "函式參數串列中的斜線 (/) 是什麼意思？"
 
 #: ../../faq/programming.rst:779
 #, fuzzy
@@ -1530,9 +1540,9 @@ msgid ""
 "position. For example, :func:`divmod` is a function that accepts positional-"
 "only parameters. Its documentation looks like this::"
 msgstr ""
-"函式引數list中的斜杠表示它前面的參數是位置參數。僅位置參數是沒有外部可用名稱"
-"的參數。在呼叫接受僅位置參數的函式時，參數僅根據其位置對映到參數。例如，:"
-"func:`divmod` 是一個只接受位置參數的函式。它的文件看起來像這樣： ::"
+"函式引數list中的斜線表示它前面的參數是位置參數。僅位置參數是沒有外部可用名稱"
+"的參數。在呼叫接受僅位置參數的函式時，參數僅根據其位置對映到參數。例"
+"如，:func:`divmod` 是一個只接受位置參數的函式。它的文件看起來像這樣： ::"
 
 #: ../../faq/programming.rst:786
 msgid ""
@@ -1549,14 +1559,13 @@ msgstr ""
 "    Return the tuple (x//y, x%y).  Invariant: div*y + mod == x."
 
 #: ../../faq/programming.rst:792
-#, fuzzy
 msgid ""
 "The slash at the end of the parameter list means that both parameters are "
 "positional-only. Thus, calling :func:`divmod` with keyword arguments would "
 "lead to an error::"
 msgstr ""
-"參數list末尾的斜杠表示兩個參數都是位置參數。因此，使用關鍵字引數呼叫 :func:"
-"`divmod` 會導致錯誤： ::"
+"參數串列最後的斜線表示兩個參數都是僅限位置參數。因此使用關鍵字引數呼"
+"叫 :func:`divmod` 會導致錯誤： ::"
 
 #: ../../faq/programming.rst:796
 msgid ""
@@ -1670,13 +1679,12 @@ msgid "How do I get int literal attribute instead of SyntaxError?"
 msgstr "如何取得 int 文字屬性而不是 SyntaxError？"
 
 #: ../../faq/programming.rst:850
-#, fuzzy
 msgid ""
-"Trying to lookup an ``int`` literal attribute in the normal manner gives a :"
-"exc:`SyntaxError` because the period is seen as a decimal point::"
+"Trying to lookup an ``int`` literal attribute in the normal manner gives "
+"a :exc:`SyntaxError` because the period is seen as a decimal point::"
 msgstr ""
-"嘗試以正常方式查詢 ``int`` 文字屬性會給出一個 SyntaxError ，因為句點被視為小"
-"數點： ::"
+"嘗試以正常方式查找 ``int`` 字面值屬性會給出一個 :exc:`SyntaxError`，因為句點"
+"被視為小數點： ::"
 
 #: ../../faq/programming.rst:853
 msgid ""
@@ -1693,11 +1701,10 @@ msgstr ""
 "SyntaxError: invalid decimal literal"
 
 #: ../../faq/programming.rst:859
-#, fuzzy
 msgid ""
 "The solution is to separate the literal from the period with either a space "
 "or parentheses."
-msgstr "解決方案是用空格或圓括號將文字與句點分開。"
+msgstr "解決方式是用空格或圓括號將字面值與句點分開。"
 
 #: ../../faq/programming.rst:869
 msgid "How do I convert a string to a number?"
@@ -1710,8 +1717,8 @@ msgid ""
 "``int('144') == 144``.  Similarly, :func:`float` converts to a floating-"
 "point number, e.g. ``float('144') == 144.0``."
 msgstr ""
-"對於整數，使用內建的 int 型別構造函式，例如``int('144') == 144``。同樣，:"
-"func:`float` 轉換為浮點數，例如``浮動（'144'）== 144.0``。"
+"對於整數，使用內建的 int 型別建構函式，例如``int('144') == 144``。同"
+"樣，:func:`float` 轉換為浮點數，例如``浮動（'144'）== 144.0``。"
 
 #: ../../faq/programming.rst:875
 #, fuzzy
@@ -1765,22 +1772,20 @@ msgid ""
 "in type constructor :func:`str`.  If you want a hexadecimal or octal "
 "representation, use the built-in functions :func:`hex` or :func:`oct`.  For "
 "fancy formatting, see the :ref:`f-strings` and :ref:`formatstrings` "
-"sections, e.g. ``\"{:04d}\".format(144)`` yields ``'0144'`` and ``\"{:.3f}\"."
-"format(1.0/3.0)`` yields ``'0.333'``."
+"sections, e.g. ``\"{:04d}\".format(144)`` yields ``'0144'`` and ``\"{:.3f}"
+"\".format(1.0/3.0)`` yields ``'0.333'``."
 msgstr ""
-"例如，要將數字 ``144`` 轉換為字串 ``'144'``，請使用內建型別構造函式 :func:"
-"`str`。如果你想要十六進製或八進製表示，請使用內建函式 :func:`hex` 或 :func:"
-"`oct`。對於精美的格式，請參閱:ref:`f-strings` 和:ref:`formatstrings` 部分，例"
-"如``\"{:04d}\".format(144)`` 產生 ``'0144'`` 和 ``\"{:.3f}\"."
-"format(1.0/3.0)`` 產生 ``'0.333'`` ."
+"例如，要將數字 ``144`` 轉換為字串 ``'144'``，請使用內建型別建構函"
+"式 :func:`str`。如果你想要十六進製或八進製表示，請使用內建函式 :func:`hex` "
+"或 :func:`oct`。對於精美的格式，請參閱:ref:`f-strings` "
+"和:ref:`formatstrings` 部分，例如``\"{:04d}\".format(144)`` 產生 ``'0144'`` "
+"和 ``\"{:.3f}\".format(1.0/3.0)`` 產生 ``'0.333'`` ."
 
 #: ../../faq/programming.rst:906
-#, fuzzy
 msgid "How do I modify a string in place?"
 msgstr "如何原地修改字串？"
 
 #: ../../faq/programming.rst:908
-#, fuzzy
 msgid ""
 "You can't, because strings are immutable.  In most situations, you should "
 "simply construct a new string from the various parts you want to assemble it "
@@ -1788,12 +1793,11 @@ msgid ""
 "unicode data, try using an :class:`io.StringIO` object or the :mod:`array` "
 "module::"
 msgstr ""
-"你不能，因為字串是不可變的。在大多數情況下，你應該簡單地從要組裝的各個部分構"
-"造一個新字串。但是，如果你需要一個能夠修改原地 unicode 資料的物件，請嘗試使"
+"這沒辦法做到，因為字串是不可變的。在大多數情況下，你應以要拿來組裝的各個部分"
+"建構出一個新字串。但是如果你需要一個能夠原地修改 unicode 資料的物件，請嘗試使"
 "用 :class:`io.StringIO` 物件或 :mod:`array` 模組： ::"
 
 #: ../../faq/programming.rst:914
-#, fuzzy
 msgid ""
 ">>> import io\n"
 ">>> s = \"Hello, world\"\n"
@@ -1830,24 +1834,22 @@ msgstr ""
 "'Hello, there!'\n"
 "\n"
 ">>> import array\n"
-">>> a = array.array('u', s)\n"
+">>> a = array.array('w', s)\n"
 ">>> print(a)\n"
-"array('u', 'Hello, world')\n"
+"array('w', 'Hello, world')\n"
 ">>> a[0] = 'y'\n"
 ">>> print(a)\n"
-"array('u', 'yello, world')\n"
+"array('w', 'yello, world')\n"
 ">>> a.tounicode()\n"
 "'yello, world'"
 
 #: ../../faq/programming.rst:938
-#, fuzzy
 msgid "How do I use strings to call functions/methods?"
 msgstr "如何使用字串呼叫函式/方法？"
 
 #: ../../faq/programming.rst:940
-#, fuzzy
 msgid "There are various techniques."
-msgstr "有各種各樣的技術。"
+msgstr "有各式各樣的技法。"
 
 #: ../../faq/programming.rst:942
 #, fuzzy
@@ -1858,7 +1860,7 @@ msgid ""
 "a case construct::"
 msgstr ""
 "最好的方法是使用將字串對映到函式的字典。這種技術的主要優點是字串不需要與函式"
-"名稱相匹配。這也是用於模擬案例構造的主要技術： ::"
+"名稱相匹配。這也是用於模擬案例建構的主要技術： ::"
 
 #: ../../faq/programming.rst:947
 msgid ""
@@ -1886,7 +1888,6 @@ msgstr ""
 "getattr(foo, 'bar')()"
 
 #: ../../faq/programming.rst:962
-#, fuzzy
 msgid ""
 "Note that :func:`getattr` works on any object, including classes, class "
 "instances, modules, and so on."
@@ -1942,11 +1943,11 @@ msgstr ""
 "f()"
 
 #: ../../faq/programming.rst:990
-#, fuzzy
 msgid ""
 "Is there an equivalent to Perl's chomp() for removing trailing newlines from "
 "strings?"
-msgstr "是否有與 Perl 的 chomp() 等效的方法用於從字串中刪除尾隨換行符？"
+msgstr ""
+"是否有與 Perl 的 chomp() 等效的方法，能用於從字串中刪除後綴的換行符號？"
 
 #: ../../faq/programming.rst:992
 msgid ""
@@ -1981,9 +1982,8 @@ msgstr ""
 "很好。"
 
 #: ../../faq/programming.rst:1009
-#, fuzzy
 msgid "Is there a scanf() or sscanf() equivalent?"
-msgstr "是否有 scanf() 或 sscanf() 等價物？"
+msgstr "是否有 scanf() 或 sscanf() 的等效方法？"
 
 #: ../../faq/programming.rst:1011
 #, fuzzy
@@ -1995,15 +1995,15 @@ msgstr "不是這樣的。"
 msgid ""
 "For simple input parsing, the easiest approach is usually to split the line "
 "into whitespace-delimited words using the :meth:`~str.split` method of "
-"string objects and then convert decimal strings to numeric values using :"
-"func:`int` or :func:`float`.  :meth:`!split` supports an optional \"sep\" "
-"parameter which is useful if the line uses something other than whitespace "
-"as a separator."
+"string objects and then convert decimal strings to numeric values "
+"using :func:`int` or :func:`float`.  :meth:`!split` supports an optional "
+"\"sep\" parameter which is useful if the line uses something other than "
+"whitespace as a separator."
 msgstr ""
 "對於簡單的輸入解析，最簡單的方法通常是使用字串物件的 :meth:`~str.split` 方法"
-"將行拆分為以空格分隔的單詞，然後使用 :func:`int` 或將十進製字串轉換為數值:"
-"func:`浮動`。 :meth:`!split` 支援可選的 \"sep\" 參數，如果該行使用空格以外的"
-"其他內容作為分隔符，該參數很有用。"
+"將行拆分為以空格分隔的單詞，然後使用 :func:`int` 或將十進製字串轉換為數"
+"值:func:`浮動`。 :meth:`!split` 支援可選的 \"sep\" 參數，如果該行使用空格以外"
+"的其他內容作為分隔符，該參數很有用。"
 
 #: ../../faq/programming.rst:1019
 #, fuzzy
@@ -2024,14 +2024,14 @@ msgstr "請參閱 :ref:`unicode-howto`。"
 #: ../../faq/programming.rst:1032
 #, fuzzy
 msgid "Can I end a raw string with an odd number of backslashes?"
-msgstr "我可以用奇數個反斜杠結束原始字串嗎？"
+msgstr "我可以用奇數個反斜線結束原始字串嗎？"
 
 #: ../../faq/programming.rst:1034
 #, fuzzy
 msgid ""
 "A raw string ending with an odd number of backslashes will escape the "
 "string's quote::"
-msgstr "以奇數個反斜杠結尾的原始字串將轉義字串的引號： ::"
+msgstr "以奇數個反斜線結尾的原始字串將轉義字串的引號： ::"
 
 #: ../../faq/programming.rst:1036
 msgid ""
@@ -2052,7 +2052,7 @@ msgstr ""
 msgid ""
 "There are several workarounds for this. One is to use regular strings and "
 "double the backslashes::"
-msgstr "有幾種解決方法。一種是使用常規字串並加倍反斜杠： ::"
+msgstr "有幾種解決方法。一種是使用常規字串並加倍反斜線： ::"
 
 #: ../../faq/programming.rst:1045
 msgid ""
@@ -2067,7 +2067,7 @@ msgstr ""
 msgid ""
 "Another is to concatenate a regular string containing an escaped backslash "
 "to the raw string::"
-msgstr "另一種方法是將包含轉義反斜杠的常規字串連接到原始字串： ::"
+msgstr "另一種方法是將包含轉義反斜線的常規字串連接到原始字串： ::"
 
 #: ../../faq/programming.rst:1051
 msgid ""
@@ -2082,7 +2082,7 @@ msgstr ""
 msgid ""
 "It is also possible to use :func:`os.path.join` to append a backslash on "
 "Windows::"
-msgstr "也可以使用 :func:`os.path.join` 在 Windows 上附加反斜杠： ::"
+msgstr "也可以使用 :func:`os.path.join` 在 Windows 上附加反斜線： ::"
 
 #: ../../faq/programming.rst:1056
 msgid ""
@@ -2100,8 +2100,8 @@ msgid ""
 "the value of the raw string. That is, the backslash remains present in the "
 "value of the raw string::"
 msgstr ""
-"請注意，雖然為了確定原始字串的結束位置而使用反斜杠「跳脫」引號，但在解釋原始"
-"字串的值時不會發生轉義。也就是說，反斜杠仍然存在於原始字串的值中： ::"
+"請注意，雖然為了確定原始字串的結束位置而使用反斜線「跳脫」引號，但在解釋原始"
+"字串的值時不會發生轉義。也就是說，反斜線仍然存在於原始字串的值中： ::"
 
 #: ../../faq/programming.rst:1064
 msgid ""
@@ -2152,8 +2152,8 @@ msgid ""
 "You should always find the hot spots in your program *before* attempting to "
 "optimize any code (see the :mod:`profile` module)."
 msgstr ""
-"在嘗試最佳化任何程式碼\\ *之前*，你應該始終找到程式中的熱點（請參閱 :mod:"
-"`profile` 模組）。"
+"在嘗試最佳化任何程式碼\\ *之前*，你應該始終找到程式中的熱點（請參"
+"閱 :mod:`profile` 模組）。"
 
 #: ../../faq/programming.rst:1084
 #, fuzzy
@@ -2208,15 +2208,15 @@ msgid ""
 "When the standard library provides a primitive for doing something, it is "
 "likely (although not guaranteed) to be faster than any alternative you may "
 "come up with.  This is doubly true for primitives written in C, such as "
-"builtins and some extension types.  For example, be sure to use either the :"
-"meth:`list.sort` built-in method or the related :func:`sorted` function to "
-"do sorting (and see the :ref:`sortinghowto` for examples of moderately "
+"builtins and some extension types.  For example, be sure to use either "
+"the :meth:`list.sort` built-in method or the related :func:`sorted` function "
+"to do sorting (and see the :ref:`sortinghowto` for examples of moderately "
 "advanced usage)."
 msgstr ""
 "當標準函式庫提供用於執行某些操作的原語時，它很可能（儘管不能保證）比你可能想"
 "出的任何替代方法都更快。對於用 C 編寫的原語，例如內建函式和一些擴充型別，情況"
 "更是如此。例如，請務必使用 :meth:`list.sort` 內建方法或相關的 :func:`sorted` "
-"函式進行排序（有關高階用法的示例，請參閱 :ref:`sortinghowto` )."
+"函式進行排序（有關高階用法的範例，請參閱 :ref:`sortinghowto` )."
 
 #: ../../faq/programming.rst:1109
 #, fuzzy
@@ -2280,8 +2280,8 @@ msgid ""
 "To accumulate many :class:`str` objects, the recommended idiom is to place "
 "them into a list and call :meth:`str.join` at the end::"
 msgstr ""
-"要累積許多 :class:`str` 物件，推薦的習慣用法是將它們放入list中並在末尾呼叫 :"
-"meth:`str.join`： ::"
+"要累積許多 :class:`str` 物件，推薦的習慣用法是將它們放入list中並在末尾呼"
+"叫 :meth:`str.join`： ::"
 
 #: ../../faq/programming.rst:1141
 msgid ""
@@ -2324,13 +2324,12 @@ msgid "How do I convert between tuples and lists?"
 msgstr "如何在元組和list之間進行轉換？"
 
 #: ../../faq/programming.rst:1162
-#, fuzzy
 msgid ""
 "The type constructor ``tuple(seq)`` converts any sequence (actually, any "
 "iterable) into a tuple with the same items in the same order."
 msgstr ""
-"型別構造器 ``tuple(seq)`` 將任何序列（實際上是任何可疊代物件）轉換為具有相同"
-"順序的相同項的元組。"
+"型別建構函式 ``tuple(seq)`` 將任何序列（實際上是任何可疊代物件）轉換為具有相"
+"同順序的相同項的元組。"
 
 #: ../../faq/programming.rst:1165
 #, fuzzy
@@ -2352,7 +2351,7 @@ msgid ""
 "3))`` yields ``[1, 2, 3]`` and ``list('abc')`` yields ``['a', 'b', 'c']``.  "
 "If the argument is a list, it makes a copy just like ``seq[:]`` would."
 msgstr ""
-"型別構造函式 ``list(seq)`` 將任何序列或可疊代物件轉換為具有相同順序的相同項目"
+"型別建構函式 ``list(seq)`` 將任何序列或可疊代物件轉換為具有相同順序的相同項目"
 "的list。例如，``list((1, 2, 3))`` 產生``[1, 2, 3]`` 和``list('abc')`` 產生"
 "``['a', 'b ', 'c']``。如果引數是一個list，它會像 ``seq[:]`` 那樣製作一個副"
 "本。"
@@ -2446,8 +2445,8 @@ msgstr ""
 #: ../../faq/programming.rst:1220
 #, fuzzy
 msgid ""
-"If all elements of the list may be used as set keys (i.e. they are all :term:"
-"`hashable`) this is often faster ::"
+"If all elements of the list may be used as set keys (i.e. they are "
+"all :term:`hashable`) this is often faster ::"
 msgstr ""
 "如果list的所有元素都可以用作集合鍵（即它們都是 :term:`hashable`），這通常會更"
 "快： ::"
@@ -2644,8 +2643,8 @@ msgstr "如何將方法或函式應用於一系列物件？"
 #: ../../faq/programming.rst:1327
 #, fuzzy
 msgid ""
-"To call a method or function and accumulate the return values is a list, a :"
-"term:`list comprehension` is an elegant solution::"
+"To call a method or function and accumulate the return values is a list, "
+"a :term:`list comprehension` is an elegant solution::"
 msgstr ""
 "呼叫一個方法或函式並累積回傳值是一個list，一個 :term:`list comprehension` 是"
 "一個優雅的解決方案： ::"
@@ -2697,7 +2696,7 @@ msgid ""
 "a ``list`` and ``+=`` as our exemplar."
 msgstr ""
 "當擴充賦值運算子應用於指向可變物件的元組元素時，此討論通常適用，但我們將使用 "
-"``list`` 和 ``+=\" 作為示例。"
+"``list`` 和 ``+=\" 作為範例。"
 
 #: ../../faq/programming.rst:1356
 #, fuzzy
@@ -2788,11 +2787,11 @@ msgid ""
 "to calling :meth:`!extend` on the list and returning the list.  That's why "
 "we say that for lists, ``+=`` is a \"shorthand\" for :meth:`!list.extend`::"
 msgstr ""
-"要了解為什麼會發生這種情況，你需要知道 (a) 如果一個物件實作了一個 :meth:"
-"`~object.__iadd__` 魔術方法，它會在執行 ``+=`` 增廣賦值時被呼叫，並且它的回傳"
-"value 是賦值陳述式中使用的值； (b) 對於list，:meth:`!__iadd__` 相當於在list上"
-"呼叫 :meth:`!extend` 並回傳list。這就是為什麼我們說對於list，``+=`` 是 :meth:"
-"`!list.extend` 的「簡寫」： ::"
+"要了解為什麼會發生這種情況，你需要知道 (a) 如果一個物件實作了一"
+"個 :meth:`~object.__iadd__` 魔術方法，它會在執行 ``+=`` 增廣賦值時被呼叫，並"
+"且它的回傳value 是賦值陳述式中使用的值； (b) 對於list，:meth:`!__iadd__` 相當"
+"於在list上呼叫 :meth:`!extend` 並回傳list。這就是為什麼我們說對於list，"
+"``+=`` 是 :meth:`!list.extend` 的「簡寫」： ::"
 
 #: ../../faq/programming.rst:1404
 msgid ""
@@ -2831,9 +2830,8 @@ msgstr ""
 "賦值仍然發生。"
 
 #: ../../faq/programming.rst:1419
-#, fuzzy
 msgid "Thus, in our tuple example what is happening is equivalent to::"
-msgstr "因此，在我們的元組示例中，發生的事情等同於： ::"
+msgstr "因此，在我們的元組範例中，發生的事情等同於： ::"
 
 #: ../../faq/programming.rst:1421
 msgid ""
@@ -2843,6 +2841,11 @@ msgid ""
 "  ...\n"
 "TypeError: 'tuple' object does not support item assignment"
 msgstr ""
+">>> result = a_tuple[0].__iadd__(['item'])\n"
+">>> a_tuple[0] = result\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"TypeError: 'tuple' object does not support item assignment"
 
 #: ../../faq/programming.rst:1427
 #, fuzzy
@@ -2857,7 +2860,6 @@ msgstr ""
 "可變的。"
 
 #: ../../faq/programming.rst:1433
-#, fuzzy
 msgid ""
 "I want to do a complicated sort: can you do a Schwartzian Transform in "
 "Python?"
@@ -2872,7 +2874,7 @@ msgid ""
 "method::"
 msgstr ""
 "該技術歸功於 Perl 社區的 Randal Schwartz，它透過將每個元素對映到其「排序值」"
-"的度量對list的元素進行排序。在 Python 中，對 :meth:`list.sort` 方法使用 "
+"的度量對串列的元素進行排序。在 Python 中，對 :meth:`list.sort` 方法使用 "
 "``key`` 引數： ::"
 
 #: ../../faq/programming.rst:1439
@@ -2884,18 +2886,16 @@ msgstr ""
 "Isorted.sort(key=lambda s: int(s[10:15]))"
 
 #: ../../faq/programming.rst:1444
-#, fuzzy
 msgid "How can I sort one list by values from another list?"
-msgstr "如何根據另一個list中的值對一個list進行排序？"
+msgstr "如何根據另一個串列中的值對一個串列進行排序？"
 
 #: ../../faq/programming.rst:1446
-#, fuzzy
 msgid ""
 "Merge them into an iterator of tuples, sort the resulting list, and then "
 "pick out the element you want. ::"
 msgstr ""
-"將它們合併到一個元組疊代器中，對結果list進行排序，然後挑選出你想要的元"
-"素。： ::"
+"將它們合併到一個元組疊代器中，對結果的串列進行排序，然後挑選出你想要的元"
+"素。 ::"
 
 #: ../../faq/programming.rst:1449
 msgid ""
@@ -2962,8 +2962,8 @@ msgstr "什麼是方法 (method)？"
 #: ../../faq/programming.rst:1481
 #, fuzzy
 msgid ""
-"A method is a function on some object ``x`` that you normally call as ``x."
-"name(arguments...)``.  Methods are defined as functions inside the class "
+"A method is a function on some object ``x`` that you normally call as "
+"``x.name(arguments...)``.  Methods are defined as functions inside the class "
 "definition::"
 msgstr ""
 "方法是一些物件 ``x`` 上的函式，你通常將其稱為 ``x.name(arguments...)`` 。方法"
@@ -2980,21 +2980,19 @@ msgstr ""
 "        return arg * 2 + self.attribute"
 
 #: ../../faq/programming.rst:1491
-#, fuzzy
 msgid "What is self?"
-msgstr "什麼是自我？"
+msgstr "什麼是 self？"
 
 #: ../../faq/programming.rst:1493
-#, fuzzy
 msgid ""
 "Self is merely a conventional name for the first argument of a method.  A "
 "method defined as ``meth(self, a, b, c)`` should be called as ``x.meth(a, b, "
 "c)`` for some instance ``x`` of the class in which the definition occurs; "
 "the called method will think it is called as ``meth(x, a, b, c)``."
 msgstr ""
-"Self 只是方法第一個引數的約定名稱。一個定義為 ``meth(self, a, b, c)`` 的方法"
-"應該被呼叫為 ``x.meth(a, b, c)`` 對於其中類別的某個實例 ``x``定義發生；被呼叫"
-"的方法會認為它被稱為 ``meth(x, a, b, c)`` 。"
+"Self 只是方法第一個引數的約定名稱。對於所定義類別的某個實例 ``x``，一個定義"
+"為 ``meth(self, a, b, c)`` 的方法應該以 ``x.meth(a, b, c)`` 形式來呼叫；被呼"
+"叫的方法會認為它是以 ``meth(x, a, b, c)`` 來呼叫的。"
 
 #: ../../faq/programming.rst:1498
 msgid "See also :ref:`why-self`."
@@ -3024,16 +3022,16 @@ msgstr ""
 "complex))``。"
 
 #: ../../faq/programming.rst:1511
-#, fuzzy
 msgid ""
-"Note that :func:`isinstance` also checks for virtual inheritance from an :"
-"term:`abstract base class`.  So, the test will return ``True`` for a "
+"Note that :func:`isinstance` also checks for virtual inheritance from "
+"an :term:`abstract base class`.  So, the test will return ``True`` for a "
 "registered class even if hasn't directly or indirectly inherited from it.  "
 "To test for \"true inheritance\", scan the :term:`MRO` of the class:"
 msgstr ""
-"請注意：func:`isinstance` 還檢查來自:term:`抽象基底類別` 的虛擬繼承。因此，測"
-"試將為已註冊的類別回傳 ``True``，即使沒有直接或間接繼承自它。要測試「真正的繼"
-"承」，請掃描該類別的 MRO："
+"請注意，:func:`isinstance` 還會檢查來自\\ :term:`抽象基底類別 (abstract base "
+"class) <abstract base class>` 的虛擬繼承。因此對已註冊類別的檢驗會回傳 "
+"``True``，即使沒有直接或間接繼承自它。要測試「真正繼承」，請掃描該類別"
+"的 :term:`MRO`："
 
 #: ../../faq/programming.rst:1516
 msgid ""
@@ -3075,6 +3073,21 @@ msgid ""
 ">>> Mapping in type(c).__mro__\n"
 "False"
 msgstr ""
+">>> c = C()\n"
+">>> isinstance(c, C)        # 直接\n"
+"True\n"
+">>> isinstance(c, P)        # 間接\n"
+"True\n"
+">>> isinstance(c, Mapping)  # 虛擬\n"
+"True\n"
+"\n"
+"# 實際的繼承鏈結\n"
+">>> type(c).__mro__\n"
+"(<class 'C'>, <class 'P'>, <class 'object'>)\n"
+"\n"
+"# 「真正繼承」的檢驗\n"
+">>> Mapping in type(c).__mro__\n"
+"False"
 
 #: ../../faq/programming.rst:1546
 #, fuzzy
@@ -3101,17 +3114,16 @@ msgid ""
 msgstr ""
 "def search(obj):\n"
 "    if isinstance(obj, Mailbox):\n"
-"        ...  # code to search a mailbox\n"
+"        ...  # 搜尋信箱的程式碼\n"
 "    elif isinstance(obj, Document):\n"
-"        ...  # code to search a document\n"
+"        ...  # 搜尋文件的程式碼\n"
 "    elif ..."
 
 #: ../../faq/programming.rst:1560
-#, fuzzy
 msgid ""
 "A better approach is to define a ``search()`` method on all the classes and "
 "just call it::"
-msgstr "更好的方法是在所有類別上定義一個 ``search()`` 方法，然後呼叫它： ::"
+msgstr "更好的方法是在所有類別上定義一個 ``search()`` 方法然後呼叫它： ::"
 
 #: ../../faq/programming.rst:1563
 msgid ""
@@ -3125,6 +3137,15 @@ msgid ""
 "\n"
 "obj.search()"
 msgstr ""
+"class Mailbox:\n"
+"    def search(self):\n"
+"        ...  # 搜尋信箱的程式碼\n"
+"\n"
+"class Document:\n"
+"    def search(self):\n"
+"        ...  # 搜尋文件的程式碼\n"
+"\n"
+"obj.search()"
 
 #: ../../faq/programming.rst:1575
 #, fuzzy
@@ -3151,8 +3172,8 @@ msgid ""
 "following class implements a class that behaves like a file but converts all "
 "written data to uppercase::"
 msgstr ""
-"Python 程式員可以輕鬆實作委託。例如，下面的類別實作了一個行為類似於檔案但將所"
-"有寫入資料轉換為大寫的類別： ::"
+"Python 程式設計師可以輕鬆實作委託。例如，下面的類別實作了一個行為類似於檔案但"
+"將所有寫入資料轉換為大寫的類別： ::"
 
 #: ../../faq/programming.rst:1587
 msgid ""
@@ -3182,29 +3203,29 @@ msgstr ""
 #, fuzzy
 msgid ""
 "Here the ``UpperOut`` class redefines the ``write()`` method to convert the "
-"argument string to uppercase before calling the underlying ``self._outfile."
-"write()`` method.  All other methods are delegated to the underlying ``self."
-"_outfile`` object.  The delegation is accomplished via the :meth:`~object."
-"__getattr__` method; consult :ref:`the language reference <attribute-"
-"access>` for more information about controlling attribute access."
+"argument string to uppercase before calling the underlying "
+"``self._outfile.write()`` method.  All other methods are delegated to the "
+"underlying ``self._outfile`` object.  The delegation is accomplished via "
+"the :meth:`~object.__getattr__` method; consult :ref:`the language reference "
+"<attribute-access>` for more information about controlling attribute access."
 msgstr ""
-"這裡的 ``UpperOut`` 類別重新定義了``write()`` 方法，在呼叫底層的``self."
-"_outfile.write()`` 方法之前將引數字串轉換為大寫。所有其他方法都委託給底層的 "
-"``self._outfile`` 物件。委託是透過 :meth:`~object.__getattr__` 方法完成的；有"
-"關控制屬性存取的更多資訊，請參閱語言參考 <attribute-access>。"
+"這裡的 ``UpperOut`` 類別重新定義了``write()`` 方法，在呼叫底層的"
+"``self._outfile.write()`` 方法之前將引數字串轉換為大寫。所有其他方法都委託給"
+"底層的 ``self._outfile`` 物件。委託是透過 :meth:`~object.__getattr__` 方法完"
+"成的；有關控制屬性存取的更多資訊，請參閱語言參考 <attribute-access>。"
 
 #: ../../faq/programming.rst:1605
 #, fuzzy
 msgid ""
 "Note that for more general cases delegation can get trickier. When "
-"attributes must be set as well as retrieved, the class must define a :meth:"
-"`~object.__setattr__` method too, and it must do so carefully.  The basic "
-"implementation of :meth:`!__setattr__` is roughly equivalent to the "
+"attributes must be set as well as retrieved, the class must define "
+"a :meth:`~object.__setattr__` method too, and it must do so carefully.  The "
+"basic implementation of :meth:`!__setattr__` is roughly equivalent to the "
 "following::"
 msgstr ""
 "請注意，對於更一般的情況，委託可能會變得更加棘手。當必須設定和檢索屬性時，該"
-"類別也必須定義一個 :meth:`~object.__setattr__` 方法，而且必須小心謹慎。 :"
-"meth:`!__setattr__` 的基本實作大致等同於以下： ::"
+"類別也必須定義一個 :meth:`~object.__setattr__` 方法，而且必須小心謹"
+"慎。 :meth:`!__setattr__` 的基本實作大致等同於以下： ::"
 
 #: ../../faq/programming.rst:1610
 msgid ""
@@ -3221,16 +3242,15 @@ msgstr ""
 "    ..."
 
 #: ../../faq/programming.rst:1616
-#, fuzzy
 msgid ""
-"Many :meth:`~object.__setattr__` implementations call :meth:`!object."
-"__setattr__` to set an attribute on self without causing infinite recursion::"
+"Many :meth:`~object.__setattr__` implementations call :meth:`!"
+"object.__setattr__` to set an attribute on self without causing infinite "
+"recursion::"
 msgstr ""
-"大多數 :meth:`!__setattr__` 實作必須修改 :meth:`self.__dict__ <object."
-"__dict__>` 以存儲 self 的本地狀態，而不會導致無限遞迴。"
+"許多 :meth:`~object.__setattr__` 的實作會呼叫 :meth:`!object.__setattr__` 以"
+"設定 self 的屬性，而不會導致無限遞迴。"
 
 #: ../../faq/programming.rst:1619
-#, fuzzy
 msgid ""
 "class X:\n"
 "    def __setattr__(self, name, value):\n"
@@ -3238,15 +3258,14 @@ msgid ""
 "        object.__setattr__(self, name, value)"
 msgstr ""
 "class X:\n"
-"    ...\n"
 "    def __setattr__(self, name, value):\n"
-"        self.__dict__[name] = value\n"
-"    ..."
+"        # 自訂邏輯放在這裡...\n"
+"        object.__setattr__(self, name, value)"
 
 #: ../../faq/programming.rst:1624
 msgid ""
-"Alternatively, it is possible to set attributes by inserting entries into :"
-"attr:`self.__dict__ <object.__dict__>` directly."
+"Alternatively, it is possible to set attributes by inserting entries "
+"into :attr:`self.__dict__ <object.__dict__>` directly."
 msgstr ""
 
 #: ../../faq/programming.rst:1629
@@ -3268,18 +3287,15 @@ msgid ""
 msgstr ""
 "class Derived(Base):\n"
 "    def meth(self):\n"
-"        super().meth()  # calls Base.meth"
+"        super().meth()  # 呼叫 Base.meth"
 
 #: ../../faq/programming.rst:1637
-#, fuzzy
 msgid ""
 "In the example, :func:`super` will automatically determine the instance from "
 "which it was called (the ``self`` value), look up the :term:`method "
 "resolution order` (MRO) with ``type(self).__mro__``, and return the next in "
 "line after ``Derived`` in the MRO: ``Base``."
 msgstr ""
-"在示例中，:func:`super` 將自動確定呼叫它的實例（``self`` 值），使用 "
-"``type(self ).__mro__``，並回傳 MRO 中``Derived`` 之後的下一行：``Base``。"
 
 #: ../../faq/programming.rst:1644
 #, fuzzy
@@ -3348,6 +3364,14 @@ msgid ""
 "    def getcount(self):\n"
 "        return C.count  # or return self.count"
 msgstr ""
+"class C:\n"
+"    count = 0   # C.__init__ 被呼叫的次數\n"
+"\n"
+"    def __init__(self):\n"
+"        C.count = C.count + 1\n"
+"\n"
+"    def getcount(self):\n"
+"        return C.count  # 或回傳 self.count"
 
 #: ../../faq/programming.rst:1678
 #, fuzzy
@@ -3422,15 +3446,14 @@ msgstr ""
 #: ../../faq/programming.rst:1708
 #, fuzzy
 msgid "How can I overload constructors (or methods) in Python?"
-msgstr "如何在 Python 中重載構造函式（或方法）？"
+msgstr "如何在 Python 中重載建構函式（或方法）？"
 
 #: ../../faq/programming.rst:1710
-#, fuzzy
 msgid ""
 "This answer actually applies to all methods, but the question usually comes "
 "up first in the context of constructors."
 msgstr ""
-"這個答案實際上適用於所有方法，但這個問題通常首先出現在構造函式的上下文中。"
+"這個答案實際上適用於所有方法，但這個問題通常會先出現在建構函式的情境中。"
 
 #: ../../faq/programming.rst:1713
 msgid "In C++ you'd write"
@@ -3449,12 +3472,11 @@ msgstr ""
 "}"
 
 #: ../../faq/programming.rst:1722
-#, fuzzy
 msgid ""
 "In Python you have to write a single constructor that catches all cases "
 "using default arguments.  For example::"
 msgstr ""
-"在 Python 中，你必須編寫一個構造函式來捕獲所有使用預設引數的情況。例如： ::"
+"在 Python 中，你必須編寫一個建構函式來捕獲所有使用預設引數的情況。例如： ::"
 
 #: ../../faq/programming.rst:1725
 msgid ""
@@ -3473,14 +3495,12 @@ msgstr ""
 "            print(\"Argument is\", i)"
 
 #: ../../faq/programming.rst:1732
-#, fuzzy
 msgid "This is not entirely equivalent, but close enough in practice."
-msgstr "這並不完全等價，但在實踐中足夠接近。"
+msgstr "這並不完全等價，但在實際情況中已夠接近。"
 
 #: ../../faq/programming.rst:1734
-#, fuzzy
 msgid "You could also try a variable-length argument list, e.g. ::"
-msgstr "你也可以嘗試可變長度引數 list，例如： ::"
+msgstr "你也可以嘗試長度可變的引數串列，例如： ::"
 
 #: ../../faq/programming.rst:1736
 msgid ""
@@ -3491,12 +3511,10 @@ msgstr ""
 "    ..."
 
 #: ../../faq/programming.rst:1739
-#, fuzzy
 msgid "The same approach works for all method definitions."
-msgstr "相同的方法適用於所有方法定義。"
+msgstr "相同的手段適用於所有方法的定義。"
 
 #: ../../faq/programming.rst:1743
-#, fuzzy
 msgid "I try to use __spam and I get an error about _SomeClassName__spam."
 msgstr "我嘗試使用 __spam，但收到有關 _SomeClassName__spam 的錯誤。"
 
@@ -3564,21 +3582,19 @@ msgid ""
 msgstr ""
 
 #: ../../faq/programming.rst:1778
-#, fuzzy
 msgid "My class defines __del__ but it is not called when I delete the object."
 msgstr "我的類別定義了 __del__ 但是當我刪除物件時它沒有被呼叫。"
 
 #: ../../faq/programming.rst:1780
-#, fuzzy
 msgid "There are several possible reasons for this."
 msgstr "這有幾個可能的原因。"
 
 #: ../../faq/programming.rst:1782
 #, fuzzy
 msgid ""
-"The :keyword:`del` statement does not necessarily call :meth:`~object."
-"__del__` -- it simply decrements the object's reference count, and if this "
-"reaches zero :meth:`!__del__` is called."
+"The :keyword:`del` statement does not necessarily "
+"call :meth:`~object.__del__` -- it simply decrements the object's reference "
+"count, and if this reaches zero :meth:`!__del__` is called."
 msgstr ""
 ":keyword:`del` 陳述式不一定呼叫 :meth:`~object.__del__` -- 它只是減少物件的引"
 "用計數，如果達到零，則呼叫 :meth:`!__del__`。"
@@ -3637,8 +3653,8 @@ msgid ""
 "Finally, if your :meth:`!__del__` method raises an exception, a warning "
 "message is printed to :data:`sys.stderr`."
 msgstr ""
-"最後，如果你的 :meth:`!__del__` 方法引發例外，則會將一條警告訊息印出到 :data:"
-"`sys.stderr`。"
+"最後，如果你的 :meth:`!__del__` 方法引發例外，則會將一條警告訊息印出"
+"到 :data:`sys.stderr`。"
 
 #: ../../faq/programming.rst:1822
 #, fuzzy
@@ -3652,8 +3668,8 @@ msgid ""
 "type). You can program the class's constructor to keep track of all "
 "instances by keeping a list of weak references to each instance."
 msgstr ""
-"Python 不會跟踪類別（或內建型別）的所有實例。你可以對類別的構造函式進行編程，"
-"以透過保留對每個實例的弱參照list來跟踪所有實例。"
+"Python 不會追蹤類別（或內建型別）的所有實例。你可以對類別的建構函式進行編程，"
+"以透過保留對每個實例的弱參照串列來追蹤所有實例。"
 
 #: ../../faq/programming.rst:1830
 msgid "Why does the result of ``id()`` appear to be not unique?"
@@ -3801,25 +3817,24 @@ msgstr "在標準函式庫程式碼中，你將看到幾種正確使用識別性
 
 #: ../../faq/programming.rst:1908
 msgid ""
-"1) As recommended by :pep:`8`, an identity test is the preferred way to "
-"check for ``None``.  This reads like plain English in code and avoids "
-"confusion with other objects that may have boolean values that evaluate to "
-"false."
+"As recommended by :pep:`8`, an identity test is the preferred way to check "
+"for ``None``.  This reads like plain English in code and avoids confusion "
+"with other objects that may have boolean values that evaluate to false."
 msgstr ""
-"1) 正如 :pep:`8` 所推薦的，識別性測試是檢查 ``None`` 的首選方法。這在程式碼中"
-"讀起來像簡單的英語，並避免與其他可能具有評估為 false 的布林值的物件混淆。"
+"正如 :pep:`8` 所推薦的，識別性測試是檢查 ``None`` 的首選方法。這在程式碼中讀"
+"起來像簡單的英語，並避免與其他可能具有評估為 false 的布林值的物件混淆。"
 
 #: ../../faq/programming.rst:1912
 #, fuzzy
 msgid ""
-"2) Detecting optional arguments can be tricky when ``None`` is a valid input "
+"Detecting optional arguments can be tricky when ``None`` is a valid input "
 "value.  In those situations, you can create a singleton sentinel object "
 "guaranteed to be distinct from other objects.  For example, here is how to "
-"implement a method that behaves like :meth:`dict.pop`::"
+"implement a method that behaves like :meth:`dict.pop`:"
 msgstr ""
-"2）當 ``None`` 是有效輸入值時，檢測可選引數可能會很棘手。在這些情況下，你可以"
-"建立一個保證與其他物件不同的單例哨兵物件。例如，這裡是如何實作一個行為類似"
-"於 :meth:`dict.pop` 的方法： ::"
+"當 ``None`` 是有效輸入值時，檢測可選引數可能會很棘手。在這些情況下，你可以建"
+"立一個保證與其他物件不同的單例哨兵物件。例如，這裡是如何實作一個行為類似"
+"於 :meth:`dict.pop` 的方法："
 
 #: ../../faq/programming.rst:1917
 msgid ""
@@ -3845,23 +3860,23 @@ msgstr ""
 "        raise KeyError(key)\n"
 "    return default"
 
-#: ../../faq/programming.rst:1928
+#: ../../faq/programming.rst:1930
 msgid ""
-"3) Container implementations sometimes need to augment equality tests with "
+"Container implementations sometimes need to augment equality tests with "
 "identity tests.  This prevents the code from being confused by objects such "
 "as ``float('NaN')`` that are not equal to themselves."
 msgstr ""
-"3) 容器實作有時需要透過識別性測試來增強相等性測試。這可以防止程式碼被諸如 "
+"容器實作有時需要透過識別性測試來增強相等性測試。這可以防止程式碼被諸如 "
 "float('NaN') 之類的不等於自身的物件所混淆。"
 
-#: ../../faq/programming.rst:1932
+#: ../../faq/programming.rst:1934
 msgid ""
-"For example, here is the implementation of :meth:`!collections.abc.Sequence."
-"__contains__`::"
+"For example, here is the implementation of :meth:`!"
+"collections.abc.Sequence.__contains__`::"
 msgstr ""
 "例如，以下是 :meth:`!collections.abc.Sequence.__contains__` 的實作： ::"
 
-#: ../../faq/programming.rst:1935
+#: ../../faq/programming.rst:1937
 msgid ""
 "def __contains__(self, value):\n"
 "    for v in self:\n"
@@ -3875,12 +3890,12 @@ msgstr ""
 "            return True\n"
 "    return False"
 
-#: ../../faq/programming.rst:1943
+#: ../../faq/programming.rst:1945
 msgid ""
 "How can a subclass control what data is stored in an immutable instance?"
 msgstr "子類別如何控制不可變實例中存儲的資料？"
 
-#: ../../faq/programming.rst:1945
+#: ../../faq/programming.rst:1947
 #, fuzzy
 msgid ""
 "When subclassing an immutable type, override the :meth:`~object.__new__` "
@@ -3888,18 +3903,17 @@ msgid ""
 "*after* an instance is created, which is too late to alter data in an "
 "immutable instance."
 msgstr ""
-"當對不可變型別進行子類別化時，覆蓋 :meth:`~object.__new__` 方法而不是 :meth:"
-"`~object.__init__` 方法。後者僅在*建立實例後*運行，這為時已晚，無法更改不可變"
-"實例中的資料。"
+"當對不可變型別進行子類別化時，覆蓋 :meth:`~object.__new__` 方法而不"
+"是 :meth:`~object.__init__` 方法。後者僅在*建立實例後*運行，這為時已晚，無法"
+"更改不可變實例中的資料。"
 
-#: ../../faq/programming.rst:1950
-#, fuzzy
+#: ../../faq/programming.rst:1952
 msgid ""
 "All of these immutable classes have a different signature than their parent "
 "class:"
 msgstr "所有這些不可變類別都具有與其父類別不同的簽名："
 
-#: ../../faq/programming.rst:1953
+#: ../../faq/programming.rst:1955
 msgid ""
 "from datetime import date\n"
 "\n"
@@ -3922,12 +3936,32 @@ msgid ""
 "        s = ''.join([c for c in s if c.isalnum() or c == '-'])\n"
 "        return super().__new__(cls, s)"
 msgstr ""
+"from datetime import date\n"
+"\n"
+"class FirstOfMonthDate(date):\n"
+"    \"總是選擇每個月的第一天\"\n"
+"    def __new__(cls, year, month, day):\n"
+"        return super().__new__(cls, year, month, 1)\n"
+"\n"
+"class NamedInt(int):\n"
+"    \"允許一些數字的文字名稱\"\n"
+"    xlat = {'zero': 0, 'one': 1, 'ten': 10}\n"
+"    def __new__(cls, value):\n"
+"        value = cls.xlat.get(value, value)\n"
+"        return super().__new__(cls, value)\n"
+"\n"
+"class TitleStr(str):\n"
+"    \"將 str 轉換成適合作為 URL 路徑的名稱\"\n"
+"    def __new__(cls, s):\n"
+"        s = s.lower().replace(' ', '-')\n"
+"        s = ''.join([c for c in s if c.isalnum() or c == '-'])\n"
+"        return super().__new__(cls, s)"
 
-#: ../../faq/programming.rst:1976
+#: ../../faq/programming.rst:1978
 msgid "The classes can be used like this:"
 msgstr "這些類別可以像這樣使用："
 
-#: ../../faq/programming.rst:1978
+#: ../../faq/programming.rst:1980
 msgid ""
 ">>> FirstOfMonthDate(2012, 2, 14)\n"
 "FirstOfMonthDate(2012, 2, 1)\n"
@@ -3947,31 +3981,33 @@ msgstr ""
 ">>> TitleStr('Blog: Why Python Rocks')\n"
 "'blog-why-python-rocks'"
 
-#: ../../faq/programming.rst:1993
+#: ../../faq/programming.rst:1995
 msgid "How do I cache method calls?"
 msgstr "如何快取方法呼叫？"
 
-#: ../../faq/programming.rst:1995
+#: ../../faq/programming.rst:1997
 #, fuzzy
 msgid ""
-"The two principal tools for caching methods are :func:`functools."
-"cached_property` and :func:`functools.lru_cache`.  The former stores results "
-"at the instance level and the latter at the class level."
+"The two principal tools for caching methods "
+"are :func:`functools.cached_property` and :func:`functools.lru_cache`.  The "
+"former stores results at the instance level and the latter at the class "
+"level."
 msgstr ""
-"快取方法的兩個主要工具是 func:`functools.cached_property` 和 :func:"
-"`functools.lru_cache`。前者在實例級別存儲結果，後者在類別級別存儲結果。"
+"快取方法的兩個主要工具是 func:`functools.cached_property` "
+"和 :func:`functools.lru_cache`。前者在實例級別存儲結果，後者在類別級別存儲結"
+"果。"
 
-#: ../../faq/programming.rst:2000
+#: ../../faq/programming.rst:2002
 #, fuzzy
 msgid ""
 "The *cached_property* approach only works with methods that do not take any "
 "arguments.  It does not create a reference to the instance.  The cached "
 "method result will be kept only as long as the instance is alive."
 msgstr ""
-"*cached_property* 方法僅適用於不帶任何引數的方法。它不會建立對實例的參照。只"
+"*cached_property* 方法僅適用於不帶任何引數的方法，它不會建立對實例的參照，只"
 "要實例還活著，快取的方法結果就會被保留。"
 
-#: ../../faq/programming.rst:2004
+#: ../../faq/programming.rst:2006
 #, fuzzy
 msgid ""
 "The advantage is that when an instance is no longer used, the cached method "
@@ -3982,7 +4018,7 @@ msgstr ""
 "好處是當一個實例不再使用時，快取的方法結果會立即釋放。缺點是如果實例累積，累"
 "積的方法結果也會累積。他們可以不受限制地成長。"
 
-#: ../../faq/programming.rst:2009
+#: ../../faq/programming.rst:2011
 msgid ""
 "The *lru_cache* approach works with methods that have :term:`hashable` "
 "arguments.  It creates a reference to the instance unless special efforts "
@@ -3991,7 +4027,7 @@ msgstr ""
 "*lru_cache* 方法適用於具有\\ :term:`可雜湊 <hashable>`\\ 引數的方法。除非特別"
 "努力傳遞弱參照，否則它會建立對實例的參照。"
 
-#: ../../faq/programming.rst:2013
+#: ../../faq/programming.rst:2015
 #, fuzzy
 msgid ""
 "The advantage of the least recently used algorithm is that the cache is "
@@ -4001,11 +4037,11 @@ msgstr ""
 "最近最少使用演算法的優點是快取受指定的 *maxsize* 限制。缺點是實例會一直保持活"
 "動狀態，直到它們從快取中老化或快取被清除。"
 
-#: ../../faq/programming.rst:2018
+#: ../../faq/programming.rst:2020
 msgid "This example shows the various techniques::"
 msgstr "這個例子展示了各種技術： ::"
 
-#: ../../faq/programming.rst:2020
+#: ../../faq/programming.rst:2022
 msgid ""
 "class Weather:\n"
 "    \"Lookup weather information on a government website\"\n"
@@ -4030,7 +4066,7 @@ msgid ""
 "        # Depends on the station_id, date, and units."
 msgstr ""
 
-#: ../../faq/programming.rst:2042
+#: ../../faq/programming.rst:2044
 #, fuzzy
 msgid ""
 "The above example assumes that the *station_id* never changes.  If the "
@@ -4040,18 +4076,19 @@ msgstr ""
 "上面的例子假設 *station_id* 永遠不會改變。如果相關的實例屬性是可變的，則 "
 "*cached_property* 方法無法工作，因為它無法檢測到屬性的更改。"
 
-#: ../../faq/programming.rst:2047
+#: ../../faq/programming.rst:2049
 #, fuzzy
 msgid ""
 "To make the *lru_cache* approach work when the *station_id* is mutable, the "
-"class needs to define the :meth:`~object.__eq__` and :meth:`~object."
-"__hash__` methods so that the cache can detect relevant attribute updates::"
+"class needs to define the :meth:`~object.__eq__` "
+"and :meth:`~object.__hash__` methods so that the cache can detect relevant "
+"attribute updates::"
 msgstr ""
-"要在 *station_id* 可變時使 *lru_cache* 方法起作用，該類別需要定義 :meth:"
-"`~object.__eq__` 和 :meth:`~object.__hash__` 方法，以便快取可以檢測相關屬性更"
-"新： ::"
+"要在 *station_id* 可變時使 *lru_cache* 方法起作用，該類別需要定"
+"義 :meth:`~object.__eq__` 和 :meth:`~object.__hash__` 方法，以便快取可以檢測"
+"相關屬性更新： ::"
 
-#: ../../faq/programming.rst:2051
+#: ../../faq/programming.rst:2053
 msgid ""
 "class Weather:\n"
 "    \"Example with a mutable station identifier\"\n"
@@ -4074,15 +4111,15 @@ msgid ""
 "        # Depends on the station_id, date, and units."
 msgstr ""
 
-#: ../../faq/programming.rst:2073
+#: ../../faq/programming.rst:2075
 msgid "Modules"
 msgstr "模組"
 
-#: ../../faq/programming.rst:2076
+#: ../../faq/programming.rst:2078
 msgid "How do I create a .pyc file?"
 msgstr "如何建立 .pyc 檔案？"
 
-#: ../../faq/programming.rst:2078
+#: ../../faq/programming.rst:2080
 #, fuzzy
 msgid ""
 "When a module is imported for the first time (or when the source file has "
@@ -4096,10 +4133,10 @@ msgstr ""
 "第一次引入模組時（或者源檔案自建立當前編譯檔案後發生更改時）應在 "
 "``__pycache__`` 的子目錄中建立包含編譯程式碼的 ``.pyc`` 檔案包含 .py 檔案的目"
 "錄。 ``.pyc`` 檔案的檔案名以與``.py`` 檔案相同的名稱開頭，以``.pyc`` 結尾，中"
-"間部分依賴於特定的``python `` 建立它的二進製檔案。（有關詳細資訊，請參閱 :"
-"pep:`3147`。）"
+"間部分依賴於特定的``python `` 建立它的二進製檔案。（有關詳細資訊，請參"
+"閱 :pep:`3147`。）"
 
-#: ../../faq/programming.rst:2086
+#: ../../faq/programming.rst:2088
 #, fuzzy
 msgid ""
 "One reason that a ``.pyc`` file may not be created is a permissions problem "
@@ -4112,7 +4149,7 @@ msgstr ""
 "__pycache__ 子目錄。例如，如果你以一個使用者的身份開發但以另一個使用者的身份"
 "運行，例如你正在使用 Web 服務器進行測試，就會發生這種情況。"
 
-#: ../../faq/programming.rst:2091
+#: ../../faq/programming.rst:2093
 #, fuzzy
 msgid ""
 "Unless the :envvar:`PYTHONDONTWRITEBYTECODE` environment variable is set, "
@@ -4125,13 +4162,13 @@ msgstr ""
 "組並且 Python 有能力（權限、空閒空間等）建立一個 .pyc 檔案是自動的建立一個"
 "``__pycache__ `` 子目錄並將編譯後的模組寫入該子目錄。"
 
-#: ../../faq/programming.rst:2096
+#: ../../faq/programming.rst:2098
 #, fuzzy
 msgid ""
-"Running Python on a top level script is not considered an import and no ``."
-"pyc`` will be created.  For example, if you have a top-level module ``foo."
-"py`` that imports another module ``xyz.py``, when you run ``foo`` (by typing "
-"``python foo.py`` as a shell command), a ``.pyc`` will be created for "
+"Running Python on a top level script is not considered an import and no "
+"``.pyc`` will be created.  For example, if you have a top-level module "
+"``foo.py`` that imports another module ``xyz.py``, when you run ``foo`` (by "
+"typing ``python foo.py`` as a shell command), a ``.pyc`` will be created for "
 "``xyz`` because ``xyz`` is imported, but no ``.pyc`` file will be created "
 "for ``foo`` since ``foo.py`` isn't being imported."
 msgstr ""
@@ -4140,17 +4177,17 @@ msgstr ""
 "入 ``python foo.py`` 作為一個 shell 命令），將為 xyz 建立一個 .pyc 因為引入"
 "了 xyz，但是不會為 foo 建立 .pyc 檔案，因為 ` `foo.py`` 沒有被引入。"
 
-#: ../../faq/programming.rst:2103
+#: ../../faq/programming.rst:2105
 msgid ""
-"If you need to create a ``.pyc`` file for ``foo`` -- that is, to create a ``."
-"pyc`` file for a module that is not imported -- you can, using the :mod:"
-"`py_compile` and :mod:`compileall` modules."
+"If you need to create a ``.pyc`` file for ``foo`` -- that is, to create a "
+"``.pyc`` file for a module that is not imported -- you can, using "
+"the :mod:`py_compile` and :mod:`compileall` modules."
 msgstr ""
 "如果你需要為 ``foo`` 建立一個 ``.pyc`` 檔案 —— 也就是說，要為一個未引入的模組"
 "建立一個 ``.pyc`` 檔案 —— 你可以使用 :mod:`py_compile` 和 :mod:`compileall` "
 "模組。"
 
-#: ../../faq/programming.rst:2107
+#: ../../faq/programming.rst:2109
 msgid ""
 "The :mod:`py_compile` module can manually compile any module.  One way is to "
 "use the ``compile()`` function in that module interactively::"
@@ -4158,7 +4195,7 @@ msgstr ""
 ":mod:`py_compile` 模組允許手動編譯任何模組。其中一種方法是在該模組中以交互方"
 "式使用 ``compile()`` 函式： ::"
 
-#: ../../faq/programming.rst:2110
+#: ../../faq/programming.rst:2112
 msgid ""
 ">>> import py_compile\n"
 ">>> py_compile.compile('foo.py')                 "
@@ -4166,7 +4203,7 @@ msgstr ""
 ">>> import py_compile\n"
 ">>> py_compile.compile('foo.py')                 "
 
-#: ../../faq/programming.rst:2113
+#: ../../faq/programming.rst:2115
 msgid ""
 "This will write the ``.pyc`` to a ``__pycache__`` subdirectory in the same "
 "location as ``foo.py`` (or you can override that with the optional parameter "
@@ -4175,7 +4212,7 @@ msgstr ""
 "這會將 ``.pyc`` 寫入與 ``foo.py`` 相同位置的 ``__pycache__`` 子目錄（或者你可"
 "以使用可選參數 ``cfile`` 覆蓋它）。"
 
-#: ../../faq/programming.rst:2117
+#: ../../faq/programming.rst:2119
 #, fuzzy
 msgid ""
 "You can also automatically compile all files in a directory or directories "
@@ -4186,15 +4223,15 @@ msgstr ""
 "你還可以使用 :mod:`compileall` 模組自動編譯目錄中的所有檔案。你可以在 shell "
 "提示符下運行 ``compileall.py`` 並提供包含要編譯的 Python 檔案的目錄路徑： ::"
 
-#: ../../faq/programming.rst:2122
+#: ../../faq/programming.rst:2124
 msgid "python -m compileall ."
 msgstr "python -m compileall ."
 
-#: ../../faq/programming.rst:2126
+#: ../../faq/programming.rst:2128
 msgid "How do I find the current module name?"
 msgstr "如何找到當前模組名稱？"
 
-#: ../../faq/programming.rst:2128
+#: ../../faq/programming.rst:2130
 #, fuzzy
 msgid ""
 "A module can find out its own module name by looking at the predefined "
@@ -4207,7 +4244,7 @@ msgstr ""
 "值為``'__main__'``，則該程式作為腳本運行。許多通常透過引入使用的模組還提供命"
 "令行介面或自檢，只有在檢查 ``__name__`` 後才執行此程式碼： ::"
 
-#: ../../faq/programming.rst:2134
+#: ../../faq/programming.rst:2136
 msgid ""
 "def main():\n"
 "    print('Running test...')\n"
@@ -4223,19 +4260,19 @@ msgstr ""
 "if __name__ == '__main__':\n"
 "    main()"
 
-#: ../../faq/programming.rst:2143
+#: ../../faq/programming.rst:2145
 msgid "How can I have modules that mutually import each other?"
 msgstr "要怎樣才能擁有相互引入的模組？"
 
-#: ../../faq/programming.rst:2145
+#: ../../faq/programming.rst:2147
 msgid "Suppose you have the following modules:"
 msgstr "假設你有以下模組："
 
-#: ../../faq/programming.rst:2147
+#: ../../faq/programming.rst:2149
 msgid ":file:`foo.py`::"
 msgstr ":file:`foo.py`： ::"
 
-#: ../../faq/programming.rst:2149
+#: ../../faq/programming.rst:2151
 msgid ""
 "from bar import bar_var\n"
 "foo_var = 1"
@@ -4243,11 +4280,11 @@ msgstr ""
 "from bar import bar_var\n"
 "foo_var = 1"
 
-#: ../../faq/programming.rst:2152
+#: ../../faq/programming.rst:2154
 msgid ":file:`bar.py`::"
 msgstr ":file:`bar.py`： ::"
 
-#: ../../faq/programming.rst:2154
+#: ../../faq/programming.rst:2156
 msgid ""
 "from foo import foo_var\n"
 "bar_var = 2"
@@ -4255,42 +4292,42 @@ msgstr ""
 "from foo import foo_var\n"
 "bar_var = 2"
 
-#: ../../faq/programming.rst:2157
+#: ../../faq/programming.rst:2159
 msgid "The problem is that the interpreter will perform the following steps:"
 msgstr "問題是直譯器將執行以下步驟："
 
-#: ../../faq/programming.rst:2159
+#: ../../faq/programming.rst:2161
 msgid "main imports ``foo``"
 msgstr "主要引入 ``foo``"
 
-#: ../../faq/programming.rst:2160
+#: ../../faq/programming.rst:2162
 msgid "Empty globals for ``foo`` are created"
 msgstr "建立了 ``foo`` 的空全域變數"
 
-#: ../../faq/programming.rst:2161
+#: ../../faq/programming.rst:2163
 msgid "``foo`` is compiled and starts executing"
 msgstr "``foo`` 被編譯並開始執行"
 
-#: ../../faq/programming.rst:2162
+#: ../../faq/programming.rst:2164
 msgid "``foo`` imports ``bar``"
 msgstr "``foo`` 引入 ``bar``"
 
-#: ../../faq/programming.rst:2163
+#: ../../faq/programming.rst:2165
 msgid "Empty globals for ``bar`` are created"
 msgstr "建立了 ``bar`` 的空全域變數"
 
-#: ../../faq/programming.rst:2164
+#: ../../faq/programming.rst:2166
 msgid "``bar`` is compiled and starts executing"
 msgstr "``bar`` 已被編譯並開始執行"
 
-#: ../../faq/programming.rst:2165
+#: ../../faq/programming.rst:2167
 msgid ""
 "``bar`` imports ``foo`` (which is a no-op since there already is a module "
 "named ``foo``)"
 msgstr ""
 "``bar`` 引入 ``foo``\\ （這是一個空操作，因為已經有一個名為 ``foo`` 的模組）"
 
-#: ../../faq/programming.rst:2166
+#: ../../faq/programming.rst:2168
 msgid ""
 "The import mechanism tries to read ``foo_var`` from ``foo`` globals, to set "
 "``bar.foo_var = foo.foo_var``"
@@ -4298,8 +4335,7 @@ msgstr ""
 "引入機制嘗試從 ``foo`` 全域變數中讀取 ``foo_var``，以設定 ``bar.foo_var = "
 "foo.foo_var``"
 
-#: ../../faq/programming.rst:2168
-#, fuzzy
+#: ../../faq/programming.rst:2170
 msgid ""
 "The last step fails, because Python isn't done with interpreting ``foo`` yet "
 "and the global symbol dictionary for ``foo`` is still empty."
@@ -4307,7 +4343,7 @@ msgstr ""
 "最後一步失敗了，因為 Python 還沒有完成對 ``foo`` 的直譯，而 ``foo`` 的全域符"
 "號字典仍然是空的。"
 
-#: ../../faq/programming.rst:2171
+#: ../../faq/programming.rst:2173
 #, fuzzy
 msgid ""
 "The same thing happens when you use ``import foo``, and then try to access "
@@ -4316,52 +4352,52 @@ msgstr ""
 "當你使用 ``import foo``，然後嘗試在全域程式碼中存取 ``foo.foo_var`` 時，也會"
 "發生同樣的事情。"
 
-#: ../../faq/programming.rst:2174
+#: ../../faq/programming.rst:2176
 msgid "There are (at least) three possible workarounds for this problem."
 msgstr "此問題有（至少）三種可能的解決方法。"
 
-#: ../../faq/programming.rst:2176
+#: ../../faq/programming.rst:2178
 #, fuzzy
 msgid ""
-"Guido van Rossum recommends avoiding all uses of ``from <module> import ..."
-"``, and placing all code inside functions.  Initializations of global "
-"variables and class variables should use constants or built-in functions "
-"only.  This means everything from an imported module is referenced as "
-"``<module>.<name>``."
+"Guido van Rossum recommends avoiding all uses of ``from <module> "
+"import ...``, and placing all code inside functions.  Initializations of "
+"global variables and class variables should use constants or built-in "
+"functions only.  This means everything from an imported module is referenced "
+"as ``<module>.<name>``."
 msgstr ""
 "Guido van Rossum 建議避免使用``from <module> import ...``，並將所有程式碼放在"
 "函式中。全域變數和類別變數的初始化應該只使用常數或內建函式。這意味著來自引入"
 "模組的所有內容都被參照為 ``<module>.<name>``。"
 
-#: ../../faq/programming.rst:2181
+#: ../../faq/programming.rst:2183
 msgid ""
 "Jim Roskind suggests performing steps in the following order in each module:"
 msgstr "Jim Roskind 建議在每個模組中按以下順序執行各個步驟："
 
-#: ../../faq/programming.rst:2183
+#: ../../faq/programming.rst:2185
 #, fuzzy
 msgid ""
 "exports (globals, functions, and classes that don't need imported base "
 "classes)"
 msgstr "匯出（不需要引入基底類別的全域變數、函式和類別）"
 
-#: ../../faq/programming.rst:2185
+#: ../../faq/programming.rst:2187
 msgid "``import`` statements"
 msgstr "``import`` 陳述式"
 
-#: ../../faq/programming.rst:2186
+#: ../../faq/programming.rst:2188
 msgid ""
 "active code (including globals that are initialized from imported values)."
 msgstr "活躍程式碼（包括從引入值初始化的全域變數）。"
 
-#: ../../faq/programming.rst:2188
+#: ../../faq/programming.rst:2190
 msgid ""
 "Van Rossum doesn't like this approach much because the imports appear in a "
 "strange place, but it does work."
 msgstr ""
 "Van Rossum 不太喜歡這種方法，因為引入出現在一個奇怪的地方，但它確實有效。"
 
-#: ../../faq/programming.rst:2191
+#: ../../faq/programming.rst:2193
 msgid ""
 "Matthias Urlichs recommends restructuring your code so that the recursive "
 "import is not necessary in the first place."
@@ -4369,15 +4405,15 @@ msgstr ""
 "Matthias Urlichs 建議重組 (restructuring) 你的程式碼，以便打從一開始就不需要"
 "遞迴引入。"
 
-#: ../../faq/programming.rst:2194
+#: ../../faq/programming.rst:2196
 msgid "These solutions are not mutually exclusive."
 msgstr "這些方案並不衝突。"
 
-#: ../../faq/programming.rst:2198
+#: ../../faq/programming.rst:2200
 msgid "__import__('x.y.z') returns <module 'x'>; how do I get z?"
 msgstr "__import__('x.y.z') 回傳 <module 'x'>，那我怎麼得到 z？"
 
-#: ../../faq/programming.rst:2200
+#: ../../faq/programming.rst:2202
 #, fuzzy
 msgid ""
 "Consider using the convenience function :func:`~importlib.import_module` "
@@ -4386,17 +4422,17 @@ msgstr ""
 "考慮使用來自 :mod:`importlib` 的便利函式 :func:`~importlib.import_module` 代"
 "替： ::"
 
-#: ../../faq/programming.rst:2203
+#: ../../faq/programming.rst:2205
 msgid "z = importlib.import_module('x.y.z')"
 msgstr "z = importlib.import_module('x.y.z')"
 
-#: ../../faq/programming.rst:2207
+#: ../../faq/programming.rst:2209
 msgid ""
 "When I edit an imported module and reimport it, the changes don't show up.  "
 "Why does this happen?"
 msgstr "當我編輯需要引入的模組並重新引入它時，更動沒有反應出來。為什麼會這樣？"
 
-#: ../../faq/programming.rst:2209
+#: ../../faq/programming.rst:2211
 #, fuzzy
 msgid ""
 "For reasons of efficiency as well as consistency, Python only reads the "
@@ -4409,7 +4445,7 @@ msgstr ""
 "一個由許多模組組成的程式中，每個模組都引入相同的基本模組，基本模組將被解析和"
 "重新解析很多次。要強制重新讀取已更改的模組，請執行以下操作： ::"
 
-#: ../../faq/programming.rst:2215
+#: ../../faq/programming.rst:2217
 msgid ""
 "import importlib\n"
 "import modname\n"
@@ -4419,17 +4455,17 @@ msgstr ""
 "import modname\n"
 "importlib.reload(modname)"
 
-#: ../../faq/programming.rst:2219
+#: ../../faq/programming.rst:2221
 msgid ""
 "Warning: this technique is not 100% fool-proof.  In particular, modules "
 "containing statements like ::"
 msgstr "警告：此技術並非 100% 萬無一失。尤其是包含像這樣陳述式的模組： ::"
 
-#: ../../faq/programming.rst:2222
+#: ../../faq/programming.rst:2224
 msgid "from modname import some_objects"
 msgstr "from modname import some_objects"
 
-#: ../../faq/programming.rst:2224
+#: ../../faq/programming.rst:2226
 #, fuzzy
 msgid ""
 "will continue to work with the old version of the imported objects.  If the "
@@ -4440,7 +4476,7 @@ msgstr ""
 "將繼續使用舊版本的引入物件。如果模組包含類別定義，現有的類別實例將*不會*更新"
 "為使用新的類別定義。這可能會導致以下自相矛盾的行為： ::"
 
-#: ../../faq/programming.rst:2229
+#: ../../faq/programming.rst:2231
 msgid ""
 ">>> import importlib\n"
 ">>> import cls\n"
@@ -4450,14 +4486,21 @@ msgid ""
 ">>> isinstance(c, cls.C)       # isinstance is false?!?\n"
 "False"
 msgstr ""
+">>> import importlib\n"
+">>> import cls\n"
+">>> c = cls.C()                # 建立一個 C 的實例\n"
+">>> importlib.reload(cls)\n"
+"<module 'cls' from 'cls.py'>\n"
+">>> isinstance(c, cls.C)       # isinstance 為 false？！？\n"
+"False"
 
-#: ../../faq/programming.rst:2237
+#: ../../faq/programming.rst:2239
 msgid ""
 "The nature of the problem is made clear if you print out the \"identity\" of "
 "the class objects::"
 msgstr "如果印出類別物件的「識別性」，問題的本質就很清楚了： ::"
 
-#: ../../faq/programming.rst:2240
+#: ../../faq/programming.rst:2242
 msgid ""
 ">>> hex(id(c.__class__))\n"
 "'0x7352a0'\n"
